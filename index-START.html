@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>👀👀👀Follow Along Nav</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .title {
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">Features</a></li>
+      <li><a href="">Videos</a></li>
+      <li><a href="">Community</a></li>
+      <li><a href="">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="title">
+    <h3>Follow <a href="">God</a></h3>
+    <h4>Produced by Xcelence, Kanye West & Boogz
+      Album JESUS IS <a href="">KING</a></h4>
+  </div>
+
+  <div class="wrapper">
+    <p><a href="">[Intro]</a></p>
+    <p>
+      Father, I stretch
+      Stretch my <a href="">hands</a> to You
+    </p>
+    <p>Lifelike, this is what your life like, try to live your <a href="">life</a> right</p>
+    <p>People really know you, push your buttons like <a href="">typewrite</a></p>
+    <p>This is like a <a href="">movie</a>, but it's really very <a href="">lifelike</a></p>
+    <p>Every single night, right, every single fight, right?</p>
+    <p>I was looking at the <a href="">'Gram</a> and I don't even like likes</p>
+    <p>I was screamin' at my dad, he told me, "It ain't Christ-like"</p>
+    <p>I was <a href="">screamin'</a> at the referee just like Mike</p>
+    <p>Lookin' for a bright light, Sigel, what your life like</p>
+    <p>Riding on a white bike, feeling like <a href="">Excitebike</a> (Stretch my <a href="">hands</a> to You)</p>
+    <p>Pressin' on the gas, <a href="https://en.wikipedia.org/wiki/Supernova">supernova</a> for a night light</p>
+    <p>Screamin' at my dad and he told me, "It ain't <a href="">Christ-like</a>"</p>
+    <p>But nobody never tell you when you're being like Christ</p>
+    <p>Only ever seein' me only when they needin' me</p>
+    <p>Like if <a href="">Tyler Perry</a> made a movie for <a href="">BET</a></p>
+    <p>Searchin' for a deity, now you wanna see it free</p>
+    <p>Now you wanna see if we, let's just see if three apiece</p>
+    <p>Tell me what your life like, turn it down, a bright <a href="">light</a></p>
+    <p>Drivin' with my <a href="">dad</a>, and he told me, "It ain't Christ-like" (Stretch my <a href="">hands</a> to
+      You)</p>
+    <p>I'm just tryna find, l've been lookin' for a new way</p>
+    <p>I don't have a cool way, bein' on my best, though</p>
+    <p>Block 'em on the text though, nothin' else next though</p>
+    <p>Not another word, letter, <a href="">picture</a>, or a decimal (Father, I stretch)</p>
+    <p>Wrestlin' with God, I don't really want to wrestle</p>
+    <p>Man, it's really lifelike, everything in my life (Stretch my <a href="">hands</a> to You)</p>
+    <p>Arguing with my dad, and he said, "It ain't <a href="">Christ-like</a>"</p>
+
+    <p><a href="">[Outro]</a></p>
+    <p>Man</p>
+    <p>You know, it's like</p>
+    <p>Somebody only close who can get you, like, off your</p>
+    <p>I be on my</p>
+    <p>I woke up this morning, I said my <a href="">prayers</a></p>
+    <p>I'm all doing good, I tried to talk to my dad (Stretch my hands to You)</p>
+    <p>Give him some advice, he starts <a href="">spazzin'</a> on me</p>
+    <p>I start spazzin' back, He said "That ain't <a href="">Christ-like</a>"</p>
+    <p>I said, "Ahhh"</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <script>
+
+    //select all links
+    const triggers = document.querySelectorAll('a');
+
+    const highlight = document.createElement('span');
+
+    highlight.classList.add('highlight');
+    document.body.append(highlight);
+
+    //listen for mouse enter
+    function highlightLink() {
+      const linkCoords = this.getBoundingClientRect();
+      console.log(linkCoords);
+
+      const coords = {
+        width: linkCoords.width,
+        height: linkCoords.height,
+        top: linkCoords.top + window.scrollY,
+        left: linkCoords.left + window.scrollX
+
+      }
+      highlight.style.width = `${coords.width}px`;
+      highlight.style.height = `${coords.height}px`;
+      highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+      console.log(this);
+    }
+
+    triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+  </script>
+</body>
+
+</html>
